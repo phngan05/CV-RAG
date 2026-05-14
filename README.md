@@ -165,5 +165,5 @@ Calculates the Cosine Similarity score (ranging from `0.0` to `1.0`) between the
 - Stored in `eval_results.json` for audit
 
 ## Submission
-- **GitHub Repo**: [your-repo-link]
+- **GitHub Repo**: [CV-RAG](https://github.com/phngan05/CV-RAG)
 - **Demo**: [your-demo-link]
