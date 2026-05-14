@@ -1,0 +1,7 @@
+GOOGLE_API_KEY=your_google_ai_studio_api_key_here
+PINECONE_API_KEY=your_pinecone_api_key_here
+KAGGLE_API_TOKEN=your_kaggle_api_token_here
+LANGSMITH_TRACING=true
+LANGSMITH_ENDPOINT=https://api.smith.langchain.com
+LANGSMITH_API_KEY=your_langsmith_api_key
+LANGSMITH_PROJECT=your_langsmith_project

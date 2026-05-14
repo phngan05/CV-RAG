@@ -1,0 +1,76 @@
+# ═══════════════════════════════════════════════════════════════
+# config.yaml — Central configuration for CV Intelligence Platform
+# All runtime parameters live here. Secrets are loaded from .env
+# ═══════════════════════════════════════════════════════════════
+
+# ── API Credentials (values loaded from .env at runtime) ────────
+api:
+  groq_api_key_env: "GROQ_API_KEY"        # env var name to read
+  pinecone_api_key_env: "PINECONE_API_KEY"    # env var name to read
+  kaggle_api_token_env: "KAGGLE_API_TOKEN"    # env var name to read
+
+# ── LLM Settings ────────────────────────────────────────────────
+llm:
+  model: "llama-3.3-70b-versatile"
+  extraction_temperature: 0.0     # deterministic for entity extraction
+  rag_temperature: 0.2            # slight creativity for RAG answers
+  outlier_temperature: 0.3        # slightly more creative for outlier analysis
+  max_tokens: 4096
+
+# ── Embedding Model ─────────────────────────────────────────────
+embeddings:
+  model_name: "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+  device: "cpu"                   # set to "cuda" if GPU is available
+  normalize: true
+  dimension: 384                  # must match model output dimension
+
+# ── Pinecone Vector Store ────────────────────────────────────────
+pinecone:
+  index_name: "cv-rag-index"
+  cloud: "aws"
+  region: "us-east-1"
+  metric: "cosine"
+
+# ── Document Ingestion ──────────────────────────────────────────
+ingestion:
+  data_source: "snehaanbhawal/resume-dataset"  # Kaggle dataset identifier
+  download_path: "data/data"
+  data_dir: "./resumes"
+  chunk_size: 800
+  chunk_overlap: 120
+  ocr_text_threshold: 100         # chars below this triggers OCR fallback
+  ocr_dpi: 300
+  ocr_languages: ["en"]
+  supported_extensions: [".pdf", ".PDF"]
+  domain_folders:
+    BANKING: "BANKING"
+    INFORMATION-TECHNOLOGY: "INFORMATION-TECHNOLOGY"
+
+# ── RAG Retrieval ────────────────────────────────────────────────
+retrieval:
+  default_k: 8                    # chunks to retrieve for general queries
+  outlier_k: 20                   # chunks for the outlier cross-domain query
+  similarity_k: 5                 # chunks for find_similar_candidates
+  search_type: "similarity"
+
+# ── Evaluation ──────────────────────────────────────────────────
+evaluation:
+  output_path: "./eval_results.json"
+  metrics:
+    - "context_precision"
+    - "context_recall"
+    - "faithfulness"
+    - "answer_correctness"
+
+# ── Streamlit App ────────────────────────────────────────────────
+app:
+  page_title: "CV Intelligence Platform"
+  page_icon: "🧠"
+  layout: "wide"
+  max_upload_size_mb: 10
+  chat_history_limit: 50          # max messages kept in session
+
+# ── Logging ─────────────────────────────────────────────────────
+logging:
+  level: "INFO"                   # DEBUG | INFO | WARNING | ERROR
+  format: "%(asctime)s [%(levelname)s] %(name)s — %(message)s"

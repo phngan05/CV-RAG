@@ -1,0 +1,81 @@
+{
+  "evaluation_timestamp": "2026-05-14T18:53:12.548804",
+  "methodology": "Cosine Similarity (Local Embeddings)",
+  "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+  "total_test_cases": 9,
+  "average_similarity_score": 0.7310966134501935,
+  "detailed_results": [
+    {
+      "question": "Which IT candidates have experience with Python programming?",
+      "domain": "INFORMATION-TECHNOLOGY",
+      "is_outlier_logic": false,
+      "cosine_similarity_score": 0.7744736267699206,
+      "generated_answer": "Based on the provided context, the following IT candidates have experience with Python programming:\n\n* The candidate from source 12635195.pdf, who taught programming courses concerning Python, as well as other programming languages like C#, Java, and Javascript.\n* The candidate from source 20824105.pdf, who has experience with Python programming, in addition to Bash Scripting.\n* The candidate from source 26480367.pdf, who has experience with web development and design using Python applications, ...",
+      "ground_truth": "IT candidates with Python experience typically have skills in scripting, data analysis, web development (Django/Flask), or machine learning frameworks such as TensorFlow or scikit-learn."
+    },
+    {
+      "question": "What cloud platform certifications do IT candidates hold?",
+      "domain": "INFORMATION-TECHNOLOGY",
+      "is_outlier_logic": false,
+      "cosine_similarity_score": 0.6769789781947678,
+      "generated_answer": "Based on the provided context, the following cloud platform certifications are mentioned:\n\n* VMware Certified Professional 5 - Desktop Virtualization (Source: 15118506.pdf)\n* No other specific cloud platform certifications are mentioned, but some candidates have experience with cloud-based solutions, such as:\n\t+ Deploying a hybrid cloud environment (Source: 21283365.pdf)\n\t+ Cloud Technologies (Source: 21283365.pdf)\n\t+ Cloud based solutions (Source: 18176523.pdf)\n\t+ Microsoft Office 365 (Source: ...",
+      "ground_truth": "Several IT candidates hold certifications in AWS (e.g. Solutions Architect), Microsoft Azure, and/or Google Cloud, demonstrating cloud infrastructure expertise."
+    },
+    {
+      "question": "Which IT candidates have led software development teams?",
+      "domain": "INFORMATION-TECHNOLOGY",
+      "is_outlier_logic": false,
+      "cosine_similarity_score": 0.7403150021967405,
+      "generated_answer": "Based on the provided context, the following IT candidates have experience leading software development teams:\n\n* The candidate from source 33381211.pdf, who is currently a Vice President of Information Technology - Software Engineering, leading all aspects of IT Application Development and Corporate Systems teams.\n* The candidate from source 14789139.pdf, who has experience leading several process re-engineering efforts and has developed and taught project management classes, and has acted as a...",
+      "ground_truth": "IT candidates with team leadership experience hold roles such as Senior Engineer, Tech Lead, or Engineering Manager, responsible for sprint planning, code review, and mentoring junior developers."
+    },
+    {
+      "question": "Which banking candidates have experience in risk management or compliance?",
+      "domain": "BANKING",
+      "is_outlier_logic": false,
+      "cosine_similarity_score": 0.8254297106061015,
+      "generated_answer": "Based on the provided context, the following banking candidates have experience in risk management or compliance:\n\n* The candidate from source 14626780.pdf, who worked as a Manager - Corporate Banking, has experience in financial and credit risk analysis, and prepared credit appraisals from multiple risk perspectives.\n* The candidate from source 28989677.pdf, who is a SENIOR COMPLIANCE OFFICER, has strong knowledge of banking products, services, and procedures, especially in KYC/AML/CFT/OFAC/Glo...",
+      "ground_truth": "Banking candidates with risk/compliance experience hold backgrounds in credit risk, market risk, regulatory compliance (Basel III, KYC/AML), internal audit, or financial controls, often as Risk Analyst or Compliance Officer."
+    },
+    {
+      "question": "Do any banking candidates have SQL or Excel data analysis skills?",
+      "domain": "BANKING",
+      "is_outlier_logic": false,
+      "cosine_similarity_score": 0.7967161269523568,
+      "generated_answer": "Yes, several banking candidates have SQL or Excel data analysis skills. Here are a few examples:\n\n* The candidate from source 34953092.pdf has skills in SQL, as well as programming languages like Python and R, which are often used for data analysis.\n* The candidate from source 54421668.pdf is proficient in MS Office and Excel.\n* The candidate from source 18824120.pdf has skills in Financial Analysis, Financial Reporting, and Quantitative Analysis, and is proficient in Microsoft Excel.\n* The cand...",
+      "ground_truth": "Many banking candidates possess SQL for querying financial databases and advanced Excel skills for financial modelling, pivot tables, VLOOKUP, and dashboards."
+    },
+    {
+      "question": "Which banking candidates have investment banking or capital markets experience?",
+      "domain": "BANKING",
+      "is_outlier_logic": false,
+      "cosine_similarity_score": 0.756642025532765,
+      "generated_answer": "Based on the provided context, the following banking candidates have investment banking or capital markets experience:\n\n* The candidate from [Source: 12021752.pdf | Category: BANKING] with the title \"SENIOR INVESTMENT BANKING SALES ANALYST\" has experience in investment banking, specifically in sales of investment banking solutions including financing, mergers, and acquisitions.\n* The candidate from [Source: 96493528.pdf | Category: BANKING] with the title \"V/P Commercial Relationship Manager\" ha...",
+      "ground_truth": "Banking candidates with investment banking backgrounds may have worked in M&A, equity research, fixed income, or capital markets, with DCF modelling, Bloomberg, and client relationship management skills."
+    },
+    {
+      "question": "Which candidates across both domains have project management experience?",
+      "domain": "ALL",
+      "is_outlier_logic": false,
+      "cosine_similarity_score": 0.5533875433856559,
+      "generated_answer": "Based on the provided context, the following candidates have project management experience:\n\n* 18457785.pdf (BANKING) - Project Manager with expertise in requirement gathering and analysis, architectural, component and interface design and development.\n* 24038620.pdf (INFORMATION-TECHNOLOGY) - Enjoys aspects of project management, including interacting with users, vendors, and peers to determine technical and budget needs.\n* 27485716.pdf (INFORMATION-TECHNOLOGY) - Seasoned project manager with e...",
+      "ground_truth": "Candidates from both domains may have PM experience: IT candidates use Agile/Scrum; Banking candidates manage regulatory or system-implementation projects. PMP or PRINCE2 certifications may be present."
+    },
+    {
+      "question": "Which candidates are multilingual or have international work experience?",
+      "domain": "ALL",
+      "is_outlier_logic": false,
+      "cosine_similarity_score": 0.7172523137251359,
+      "generated_answer": "Based on the provided context, the following candidates have multilingual skills or international work experience:\n\n* The candidate from source 28697203.pdf (Category: INFORMATION-TECHNOLOGY) is fluent in Spanish.\n* The candidate from source 39569771.pdf (Category: BANKING) has experience as the founder of \"Vietnam Entrepreneurs of Today and Tomorrow Network\" since 2014 and \"Business English for Professionals and Entrepreneurs\" since 2015, indicating international work experience. \n\nNo other can...",
+      "ground_truth": "Some candidates mention proficiency in multiple languages or international work across different countries or multinational organisations."
+    },
+    {
+      "question": "Which banking candidates have the most transferable skills for an IT role, particularly in data engineering or analytics?",
+      "domain": "BANKING",
+      "is_outlier_logic": true,
+      "cosine_similarity_score": 0.7386741936882977,
+      "generated_answer": "{'answer': 'After analyzing the provided banking resumes, I have identified the Top 5 most trainable candidates for IT roles based on their transferable skills, technical aptitude, and potential for growth. Here are the top 5 candidates, ranked from #1 to #5:\\n\\n**#1: Candidate from SOURCE FILE: 98348532.pdf**\\n\\n* **Current Banking Role / Skills:** Data analysis, database design, Oracle SQL, SDLC, Teradata, and data warehousing.\\n* **Transferable IT Skills:** Data analysis, database management,...",
+      "ground_truth": "Banking candidates best suited for IT data roles demonstrate quantitative \n                analysis, SQL/database skills, experience with financial data pipelines, \n                automation via Excel macros or Python scripting, and systems thinking from \n                core banking or ERP platforms."
+    }
+  ]
+}
