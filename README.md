@@ -166,4 +166,4 @@ Calculates the Cosine Similarity score (ranging from `0.0` to `1.0`) between the
 
 ## Submission
 - **GitHub Repo**: [CV-RAG](https://github.com/phngan05/CV-RAG)
-- **Demo**: [your-demo-link]
+- **Demo**: [Streamlit Demo](https://cv-assistant123.streamlit.app)
